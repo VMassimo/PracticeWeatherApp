@@ -1,5 +1,6 @@
 package com.example.practiceweather
 
+import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -30,6 +31,15 @@ class MainActivity2 : AppCompatActivity() {
             mediaPlayer.pause()
             statusTextView.text = "Status: Paused"
         }
+
+
+        val nextpageButton = findViewById<Button>(R.id.buttonThirdPage)
+
+        nextpageButton.setOnClickListener {
+            val intent = Intent(this, MainActivity3::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }
